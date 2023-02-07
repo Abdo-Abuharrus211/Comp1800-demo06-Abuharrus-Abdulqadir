@@ -25,9 +25,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&family=Montserrat:wght@400;900&family=Playfair+Display&family=Roboto+Slab&display=swap"
         rel="stylesheet">
+    <!-- Google Icons (Material Design)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/style.css">
-
 
 </head>
 
@@ -40,7 +41,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <!-- <img src="./images/duck-logo.JPG" height="36"> -->
-                ElmoHikes</a>
+                Abdo's Trails</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -54,26 +55,77 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="./images/duck-logo.JPG" alt="" width="72" height="57">
-        <h1 class="wlcm-txt">Welcome to ElmoHikes</h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Join a community of hikers looking for new places to explore.</p>
-            <h2>The view is better, together.</h2>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="logn-btn btn btn-lg px-4 gap-3 btn-outline-dark">Login/Signup</button>
+
+
+    <div class="container-fluid">
+        <div class="card-body">
+            <label for="hike-name">Name of the hike:</label>
+            <br>
+            <input id="hike-name" type="text">
+        </div>
+
+        <div class="card-body form-group mb-3 mt-3">
+            <label for="comment">Comments:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        </div>
+
+        <div class="card-body form-group">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">Flooded</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">No</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio3">Not Sure</label>
             </div>
+        </div>
+
+        <!-- Drop down difficulty -->
+        <div class="card-body form-group dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Level of the Hike
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button" id="leveleasy">Easy</button></li>
+                <li><button class="dropdown-item" type="button" id="levelmoderate">Moderate</button></li>
+                <li><button class="dropdown-item" type="button" id="levelhard">Hard</button></li>
+            </ul>
+        </div>
+
+        <!-- Star rating -->
+        <div class="card-body">
+            <p>Rate your overall experience:</p>
+            <span class="material-icons" id="star1">star</span>
+            <span class="material-icons" id="star2">star</span>
+            <span class="material-icons" id="star3">star</span>
+            <span class="material-icons" id="star4">star_outline</span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="card-body d-grid gap-2">
+            <button id="submit" class="btn btn-primary" type="button">Submit</button>
         </div>
     </div>
 
+    <footer class="navbar justify-content-evenly fixed-bottom myFooter">
+        <div class="container">
+            <span class="material-icons">favorite</span>
+            <span class="material-icons">home</span>
+            <span class="material-icons">map</span>
+        </div>
+    </footer>
+
     <!-- copyright footer -->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
         <p class="col-md-4 mb-0 text-muted">&copy; 2022 BCIT COMP1800</p>
         <a href="/"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">

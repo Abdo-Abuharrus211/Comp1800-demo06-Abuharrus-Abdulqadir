@@ -1,1 +1,22 @@
+body{
+    font-family: Lato;
+    color: #393E46;
+    background-color: #F8F4EA;
+}
 
+.myNavbar, .myFooter{
+    background-color: #6D9886;
+}
+
+a{
+    color: inherit;
+}
+
+.wlcm-txt{
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.logn-btn{
+    background-color: #579BB1;
+}
